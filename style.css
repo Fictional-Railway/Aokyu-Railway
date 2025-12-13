@@ -423,3 +423,62 @@ footer {
 .kaisoku {
     color: var(--accent-color);
 }
+
+
+/* ヘッダー */
+header {
+    background: #fff;
+    border-bottom: 4px solid var(--primary-color);
+    padding: 7px 0;
+    /* --- 追加 --- */
+    position: fixed; /* ヘッダーを画面上部に固定 */
+    top: 0;
+    width: 100%;
+    z-index: 1000; /* 最前面 */
+    /* ------------ */
+}
+
+/* 運行情報バー */
+.status-bar {
+    background-color: #eee;
+    padding: 13px 0;
+    font-size: 0.9rem;
+    border-bottom: 1px solid #ddd;
+    /* --- 追加 --- */
+    position: fixed; /* 運行情報バーを固定 */
+    top: 82px; /* ヘッダーの高さに合わせて調整 */
+    width: 100%;
+    z-index: 999; /* ヘッダーよりは下 */
+    /* ------------ */
+}
+
+/* 基本設定 */
+body {
+    font-family: 'Noto Sans JP', "Helvetica Neue", Arial, sans-serif;
+    margin: 0;
+    /* ------------------------------------- */
+    /* 修正: 固定ヘッダー/ステータスバーの高さ分を追加 */
+    padding-top: 105px; 
+    /* ------------------------------------- */
+    color: var(--text-main);
+    line-height: 1.6;
+    background-color: #fff;
+}
+
+/* ナビゲーションのモバイル展開時のオーバーライド (JSが操作するスタイル) */
+@media (max-width: 768px) {
+    /* 既存のコードをそのまま残し、JSが操作する要素だけ調整します */
+    /* ... (中略) ... */
+
+    /* JSによって設定されるnav-listのスタイルをここで調整します */
+    .nav-list {
+        /* JSでdisplay: flexになるので、それ以外はCSSで調整 */
+        padding: 0; /* JSで20px設定されているので上書き */
+    }
+
+    /* .nav-list内のリストアイテムも調整（任意：見た目をよりリストらしく） */
+    .nav-list li {
+        padding: 10px 40px;
+
+    }
+}

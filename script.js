@@ -11,31 +11,42 @@ document.addEventListener('DOMContentLoaded', () => {
     setInterval(updateClock, 1000); // 1秒ごとに更新
     updateClock(); // 初回実行
 
-    // --- モバイルメニューのトグル（簡易版） ---
+    // --- モバイルメニューのトグル（ロゴが隠れないように修正） ---
     const menuBtn = document.getElementById('menuBtn');
     const navList = document.querySelector('.nav-list');
+    const header = document.querySelector('header');
+    const statusBar = document.getElementById('statusBar');
 
     menuBtn.addEventListener('click', () => {
-        // CSSでdisplay:flexなどを制御するクラスを付け替えるのが一般的ですが、
-        // ここでは簡易的にJSでdisplayプロパティを操作します。
+        // ヘッダーとステータスバーの現在の高さを取得
+        const offsetTop = header.offsetHeight + statusBar.offsetHeight;
+
         if (navList.style.display === 'flex') {
+            // メニューを閉じる
             navList.style.display = 'none';
+            menuBtn.querySelector('i').className = "fa-solid fa-bars";
         } else {
+            // メニューを開く
             navList.style.display = 'flex';
             navList.style.flexDirection = 'column';
-            navList.style.position = 'absolute';
-            navList.style.top = '70px';
+            
+            // ★修正点: topの位置を固定ヘッダー+ステータスバーの下に設定★
+            navList.style.position = 'fixed'; // fixedに変更してスクロールしても付いてくるように
+            navList.style.top = `${offsetTop}px`; // 計算した高さを適用
+            
             navList.style.left = '0';
             navList.style.width = '100%';
             navList.style.background = '#fff';
-            navList.style.padding = '20px';
+            navList.style.padding = '0'; // CSSの調整でpaddingは削除
             navList.style.boxShadow = '0 5px 5px rgba(0,0,0,0.1)';
-            navList.style.zIndex = '100';
+            navList.style.zIndex = '900'; // 固定されたヘッダー/ステータスバーの下
+            
+            menuBtn.querySelector('i').className = "fa-solid fa-xmark";
         }
     });
 
     // --- 運行情報のシミュレーション（ランダムでたまに遅延する演出） ---
-    // ※実際はサーバーからJSONを取得するなどの処理になります。
+    // ※以下、ご提供いただいたコードと同じです
     const statusText = document.getElementById('statusText');
     const statusIcon = document.querySelector('.status-content i');
     const statusContent = document.querySelector('.status-content');
