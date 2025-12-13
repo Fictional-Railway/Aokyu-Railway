@@ -1,5 +1,6 @@
 /* 変数定義（あおかぜカラー） */
 :root {
+    --limited-express-color: #e65100; /* オレンジみの赤（例: Deep Orange 800） */
     --primary-color: #003366; /* 濃い青（鉄紺に近い） */
     --accent-color: #00A1E9;  /* 鮮やかなシアン */
     --bg-light: #f4f7f9;
@@ -344,6 +345,28 @@ header {
     margin-top: -2px;
 }
 
+/* --- 追加: 特急停車駅のスタイル --- */
+.station.limited-express .dot {
+    width: 20px; /* 快速より少し大きく */
+    height: 20px;
+    background: var(--limited-express-color); /* オレンジみの赤 */
+    border: 3px solid #fff;
+    border-radius: 50%;
+    /* 外側のリングはメインカラーで強調 */
+    box-shadow: 0 0 0 4px var(--primary-color);
+    margin-top: -4px; /* サイズが大きくなった分、位置を調整 */
+}
+/* 快速と特急の両方が停車する場合、特急のスタイルを適用 */
+.station.rapid.limited-express .dot {
+    /* 特急のスタイルを優先し、ドットがオレンジになるようにします */
+    width: 20px; 
+    height: 20px;
+    background: var(--limited-express-color); 
+    border: 3px solid #fff;
+    box-shadow: 0 0 0 4px var(--primary-color);
+    margin-top: -4px;
+}
+
 .station .name {
     font-size: 0.8rem;
     writing-mode: vertical-rl; /* 縦書き */
@@ -481,4 +504,32 @@ body {
         padding: 10px 40px;
 
     }
+}
+
+/* --- 追加: 路線図セクション内のボタン --- */
+.route-map-btn-area {
+    text-align: center;
+    margin-top: 25px; /* 凡例からの間隔 */
+}
+
+.route-map-btn {
+    /* ニュースセクションの .btn-outline をベースに色を反転させる */
+    display: inline-block;
+    border: 1px solid #fff; /* 枠線を白に */
+    color: #fff; /* 文字色を白に */
+    padding: 8px 25px;
+    font-size: 0.9rem;
+    border-radius: 25px;
+    background: transparent; /* 背景は透明 */
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.route-map-btn i {
+    margin-left: 5px;
+}
+
+.route-map-btn:hover {
+    background-color: #fff; /* ホバーで背景を白に */
+    color: var(--primary-color); /* 文字色を濃い青に */
+    /* border: 1px solid #fff; は変化なし */
 }
