@@ -1,0 +1,425 @@
+/* 変数定義（あおかぜカラー） */
+:root {
+    --primary-color: #003366; /* 濃い青（鉄紺に近い） */
+    --accent-color: #00A1E9;  /* 鮮やかなシアン */
+    --bg-light: #f4f7f9;
+    --text-main: #333;
+    --text-light: #666;
+    --status-ok: #28a745;
+    --status-warn: #ffc107;
+}
+
+/* 基本設定 */
+body {
+    font-family: 'Noto Sans JP', "Helvetica Neue", Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    color: var(--text-main);
+    line-height: 1.6;
+    background-color: #fff;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+    transition: 0.3s;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* ヘッダー */
+header {
+    background: #fff;
+    border-bottom: 4px solid var(--primary-color);
+    padding: 15px 0;
+}
+
+.header-inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    color: var(--primary-color);
+}
+
+.logo-icon {
+    font-size: 2.5rem;
+    margin-right: 15px;
+}
+
+.logo-text h1 {
+    margin: 0;
+    font-size: 1.5rem;
+    letter-spacing: 0.1em;
+}
+
+.logo-text span {
+    font-size: 0.7rem;
+    color: var(--accent-color);
+    letter-spacing: 0.2em;
+    font-weight: bold;
+}
+
+/* ナビゲーション */
+.nav-list {
+    display: flex;
+    gap: 20px;
+    font-weight: 500;
+}
+
+.nav-list a:hover {
+    color: var(--accent-color);
+}
+
+.lang-switch {
+    font-size: 0.8rem;
+    border: 1px solid #ccc;
+    padding: 2px 8px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.mobile-menu-btn {
+    display: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+/* 運行情報バー */
+.status-bar {
+    background-color: #eee;
+    padding: 10px 0;
+    font-size: 0.9rem;
+    border-bottom: 1px solid #ddd;
+}
+
+.status-bar .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.status-label {
+    background: var(--primary-color);
+    color: #fff;
+    padding: 2px 8px;
+    border-radius: 2px;
+    margin-right: 10px;
+    font-size: 0.8rem;
+}
+
+.status-content {
+    font-weight: bold;
+    color: var(--status-ok);
+    flex-grow: 1;
+}
+
+.current-time {
+    color: var(--text-light);
+    font-family: monospace;
+}
+
+/* メインビジュアル */
+.hero {
+    height: 400px;
+    background: linear-gradient(rgba(0,51,102,0.3), rgba(0,51,102,0.6)), url('https://images.unsplash.com/photo-1474487548417-781cb714d22d?auto=format&fit=crop&q=80'); /* フリー素材の鉄道っぽい画像 */
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: #fff;
+}
+
+.hero h2 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+}
+
+.hero p {
+    font-size: 1.2rem;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
+}
+
+/* 重要なお知らせ */
+.important-notice {
+    background: #fff3cd; /* 注意喚起の黄色 */
+    padding: 15px 0;
+    border-bottom: 1px solid #ffeeba;
+    color: #856404;
+}
+
+.notice-list li {
+    margin-bottom: 5px;
+}
+
+.notice-list a {
+    text-decoration: underline;
+}
+
+/* クイックメニュー */
+.quick-menu {
+    padding: 40px 0;
+    background: var(--bg-light);
+}
+
+.grid-wrapper {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+.menu-card {
+    background: #fff;
+    padding: 30px 20px;
+    text-align: center;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+    border-top: 4px solid var(--accent-color);
+}
+
+.menu-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.menu-card i {
+    font-size: 2.5rem;
+    color: var(--primary-color);
+    margin-bottom: 15px;
+}
+
+.menu-card h3 {
+    margin: 0 0 5px 0;
+    font-size: 1.1rem;
+}
+
+.menu-card p {
+    color: var(--text-light);
+    font-size: 0.8rem;
+    margin: 0;
+}
+
+/* ニュースリリース */
+.news-section {
+    padding: 40px 0;
+}
+
+.section-title {
+    text-align: center;
+    border-bottom: 2px solid var(--primary-color);
+    display: inline-block;
+    padding-bottom: 5px;
+    margin-bottom: 30px;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.section-title small {
+    display: block;
+    font-size: 0.9rem;
+    color: var(--accent-color);
+    font-weight: normal;
+}
+
+.news-item {
+    border-bottom: 1px solid #eee;
+    padding: 15px 0;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.news-item .tag {
+    font-size: 0.7rem;
+    padding: 3px 8px;
+    border-radius: 2px;
+    margin-right: 10px;
+    color: #fff;
+    min-width: 60px;
+    text-align: center;
+}
+
+.tag.event { background: #e83e8c; }
+.tag.operation { background: #dc3545; }
+.tag.goods { background: #fd7e14; }
+
+.news-item .date {
+    margin-right: 15px;
+    color: var(--text-light);
+    font-family: monospace;
+}
+
+.btn-area {
+    text-align: right;
+    margin-top: 20px;
+}
+
+.btn-outline {
+    border: 1px solid var(--text-light);
+    padding: 5px 20px;
+    font-size: 0.9rem;
+    border-radius: 20px;
+}
+
+/* 路線図 */
+.route-map-section {
+    background: var(--primary-color);
+    color: #fff;
+    padding: 40px 0;
+}
+
+.route-map-section .section-title {
+    border-color: #fff;
+}
+
+.route-scroll {
+    overflow-x: auto;
+    padding: 20px 0;
+}
+
+.route-line {
+    display: flex;
+    align-items: center;
+    min-width: 800px; /* 横スクロールさせるため */
+    position: relative;
+    padding: 0 20px;
+}
+
+/* 路線（線） */
+.route-line::before {
+    content: '';
+    position: absolute;
+    left: 20px;
+    right: 20px;
+    top: 14px;
+    height: 4px;
+    background: #fff;
+    z-index: 0;
+}
+
+.station {
+    position: relative;
+    z-index: 1;
+    flex: 1;
+    text-align: center;
+}
+
+.station .dot {
+    display: block;
+    width: 12px;
+    height: 12px;
+    background: #fff;
+    border: 4px solid var(--primary-color); /* 線と同じ色で縁取り */
+    border-radius: 50%;
+    margin: 0 auto 10px auto;
+}
+
+.station.rapid .dot {
+    width: 16px;
+    height: 16px;
+    background: var(--accent-color); /* 快速停車駅の色 */
+    border-color: #fff;
+    box-shadow: 0 0 0 4px var(--primary-color);
+    margin-top: -2px;
+}
+
+.station .name {
+    font-size: 0.8rem;
+    writing-mode: vertical-rl; /* 縦書き */
+    text-orientation: upright;
+    letter-spacing: 2px;
+    height: 100px; /* 高さ確保 */
+}
+
+.name2 {
+    font-size: 0.75rem;
+    writing-mode: vertical-rl; /* 縦書き */
+    text-orientation: upright;
+    letter-spacing: 2px;
+    height: 100px; /* 高さ確保 */
+}
+
+.route-note {
+    text-align: center;
+    font-size: 0.8rem;
+    margin-top: 20px;
+    opacity: 0.8;
+}
+
+/* フッター */
+footer {
+    background: #333;
+    color: #fff;
+    padding-top: 40px;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding-bottom: 40px;
+}
+
+.footer-links a {
+    display: inline-block;
+    margin-left: 20px;
+    font-size: 0.9rem;
+    color: #ccc;
+}
+
+.copyright {
+    background: #222;
+    text-align: center;
+    padding: 10px;
+    font-size: 0.7rem;
+    color: #666;
+}
+
+/* レスポンシブ対応 */
+@media (max-width: 768px) {
+    .nav-list {
+        display: none; /* モバイルでは隠す（JSで制御想定） */
+    }
+    .mobile-menu-btn {
+        display: block;
+    }
+    .grid-wrapper {
+        grid-template-columns: 1fr 1fr;
+    }
+    .hero h2 {
+        font-size: 1.8rem;
+    }
+    .footer-content {
+        flex-direction: column;
+        gap: 20px;
+    }
+    .footer-links a {
+        margin-left: 0;
+        margin-right: 15px;
+    }
+}
+
+.kaisoku {
+    color: var(--accent-color);
+}
