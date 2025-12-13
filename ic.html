@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>蒼風急行 | Aokaze Railway</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <header>
+        <div class="header-inner">
+            <div class="logo">
+                <span class="logo-icon"><i class="fa-solid fa-wind"></i></span>
+                <div class="logo-text">
+                    <h1>蒼風急行</h1>
+                    <span>AOKAZE RAILWAY</span>
+                </div>
+            </div>
+            <nav>
+                <ul class="nav-list">
+                    <li class="ue"><a href="#">運行情報</a></li>
+                    <li><a href="#">時刻表・運賃</a></li>
+                    <li><a href="#">路線図・駅情報</a></li>
+                    <li><a href="#">企業情報</a></li>
+                </ul>
+                <div class="mobile-menu-btn" id="menuBtn">
+                    <i class="fa-solid fa-bars"></i>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <br>
+    <div class="status-bar" id="statusBar">
+        <div class="container">
+            <span class="status-label">美浜線</span>
+            <span class="status-content"><i class="fa-solid fa-circle-check"></i> <span id="statusText">平常通り運行しています</span></span>
+            <span class="current-time" id="clock">--:--</span>
+        </div>
+    </div>
+
+    <!--ICカード-->
+    <section class="ic-card-section">
+        <div class="container">
+            <h2 class="section-title">ICカードサービス <small>IC Card Service</small></h2>
+<section class="ic-service-section section-padding">
+        <div class="container">
+            <div class="ic-misaca-card">
+                <div class="ic-header">
+                    <h2>ご利用いただけるICカード</h2>
+                </div>
+                <div class="ic-content-grid">
+                    <div class="ic-image-container">
+                        <img src="./image/Misaca.png" width="600%" alt="">
+                        <p class="ic-note">※若狭海岸鉄道発行</p>
+                    </div>
+                    <div class="ic-text-content">
+                        <h3><img src="./image/Misaca文字2.png" width="65px" alt=""> がご利用可能です</h3>
+                        <p>
+                            蒼風急行の全線において、若狭海岸鉄道株式会社が発行するICカード「<img src="./image/Misaca文字2.png" width="50px" alt="">」 がご利用いただけます。
+                            乗車券購入の手間がなく、スムーズにご乗車いただけます。
+                        </p>
+                        <a href="#" class="btn-primary misaca-link" target="_blank">
+                            Misacaについて（若狭海岸鉄道サイトへ）
+                            <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="ic-other-info">
+                <h3>全国相互利用サービスについて</h3>
+                <p>
+                    Misacaは、全国の交通系ICカード相互利用サービスに対応しています。
+                    主要な交通系ICカード（Suica、PASMO、ICOCA、manaca、TOICA、PiTaPa、nimoca、SUGOCAなど）での乗車が可能です。
+                    ただし、一部のサービスや特典は対象外となる場合がありますので、ご注意ください。
+                </p>
+            </div>
+        </div>
+    </section>
+</main>
+
+    <footer>
+        <div class="container footer-content">
+            <div class="footer-info">
+                <h3>蒼風急行株式会社</h3>
+                <p>〒919-xxxx 若狭県東江市蒼風大野1-1<br>TEL: 0770-xx-xxxx</p>
+            </div>
+            <div class="footer-links">
+                <a href="#">安全報告書</a>
+                <a href="#">プライバシーポリシー</a>
+                <a href="#">サイトマップ</a>
+                <a href="#">お問い合わせ</a>
+            </div>
+        </div>
+        <div class="copyright">
+            &copy; Aokaze Kyuko Railway Co.,Ltd. All Rights Reserved.
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

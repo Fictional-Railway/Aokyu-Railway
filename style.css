@@ -533,3 +533,157 @@ body {
     color: var(--primary-color); /* 文字色を濃い青に */
     /* border: 1px solid #fff; は変化なし */
 }
+
+/* =================================================== */
+/* ICカードサービス（ic.html）専用スタイル - デザイン調整版 */
+/* =================================================== */
+
+.ic-service-section {
+    padding: 40px 0; /* padding: 40px 0; はsection-paddingクラスで既に定義されているはずですが、念のため */
+}
+
+/* ページタイトル */
+.page-title-section {
+    background: var(--bg-light); /* 薄い背景色 */
+    padding: 30px 0;
+    text-align: center;
+    border-bottom: 2px solid var(--accent-color);
+}
+.page-title-section h1 {
+    color: var(--primary-color);
+    font-size: 2rem;
+    margin: 0 0 5px 0;
+}
+.page-title-section .subtitle {
+    color: var(--text-light);
+    font-size: 1rem;
+    margin: 0;
+}
+
+/* Misacaカード全体を包むコンテナ */
+.ic-misaca-card {
+    border: 1px solid var(--bg-light); 
+    border-radius: 8px; /* 角丸は維持 */
+    overflow: hidden;
+    margin-bottom: 40px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05); /* 影を薄めに */
+}
+
+/* カードのヘッダー部分 */
+.ic-header {
+    background-color: var(--primary-color); /* 濃い青を維持 */
+    color: #fff;
+    padding: 15px 25px;
+}
+
+.ic-header h2 {
+    font-size: 1.2rem;
+    margin: 0;
+    font-weight: bold;
+}
+
+/* Misacaカードの内容（画像とテキスト）のレイアウト */
+.ic-content-grid {
+    padding: 25px;
+    background: #fff; /* 背景を白に */
+    display: grid;
+    grid-template-columns: 1fr; 
+    gap: 30px;
+}
+
+/* Misacaロゴ風のダミーデザインを蒼風急行のアクセントカラーに統一 */
+.misaca-logo {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 200px;
+    height: 120px;
+    /* 蒼風急行のアクセントカラー（シアン）を使用 */
+    background: var(--accent-color); 
+    color: #fff;
+    font-size: 2.2rem;
+    font-weight: 900;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    margin-bottom: 10px;
+}
+
+.ic-note {
+    font-size: 0.85rem;
+    color: var(--text-light); /* 薄い色に統一 */
+}
+
+/* テキストコンテンツ */
+.ic-text-content h3 {
+    color: var(--primary-color);
+    /* 見出しの下線をアクセントカラーに統一 */
+    border-bottom: 2px solid var(--accent-color);
+    padding-bottom: 5px;
+    margin-top: 0;
+}
+
+/* 重要な注意書き（発行/払い戻し不可）のデザインを調整 */
+.important-note {
+    /* 背景を薄いグレー/ブルー系に変更し、ブランドカラーに寄せる */
+    background-color: #e9f7ff; 
+    /* 左の境界線を濃い青（プライマリカラー）に変更 */
+    border-left: 5px solid var(--primary-color); 
+    padding: 15px;
+    margin: 20px 0;
+    font-size: 0.95rem;
+    line-height: 1.6;
+}
+
+.red-text {
+    /* 重要なテキストは警告色（赤）を維持しつつ、トーンを統一 */
+    color: #dc3545; 
+    font-weight: bold;
+}
+
+/* 若狭海岸鉄道へのリンクボタンをプライマリカラーのベタ塗りに変更 */
+.btn-primary.misaca-link {
+    display: inline-block;
+    padding: 10px 20px;
+    color: #fff;
+    background-color: var(--primary-color); /* 濃い青 */
+    border-radius: 4px;
+    transition: background-color 0.3s;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.btn-primary.misaca-link:hover {
+    background-color: #004d99; /* 少し濃くする */
+}
+
+
+/* その他の情報 */
+.ic-other-info {
+    padding: 25px;
+    background: var(--bg-light); /* 他のセクションと同じ背景色 */
+    border-radius: 8px;
+}
+
+.ic-other-info h3 {
+    color: var(--primary-color);
+    margin-bottom: 15px;
+    font-size: 1.3rem; /* 少し小さく調整 */
+}
+
+
+/* PC（タブレット以上）でのレイアウト調整 (変更なし) */
+@media (min-width: 768px) {
+    .ic-content-grid {
+        grid-template-columns: 250px 1fr; 
+        align-items: start;
+    }
+    
+    .ic-image-container {
+        padding-top: 10px;
+        text-align: left;
+    }
+
+    .misaca-logo {
+        margin-left: 0;
+    }
+}
