@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>蒼風急行 | Aokaze Railway</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <header>
+        <div class="header-inner">
+            <div class="logo">
+                <a href="./index.html">
+                <span class="logo-icon"><i class="fa-solid fa-wind"></i></span></a>
+                <div class="logo-text">
+                    <a href="./index.html">
+                    <h1>蒼風急行</h1>
+                    </a><a href="./index.html">
+                    <span>AOKAZE RAILWAY</span>
+                    </a>
+                </div>
+            </div>
+            <nav>
+                <ul class="nav-list">
+                    <li class="ue"><a href="#">運行情報</a></li>
+                    <li><a href="#">時刻表・運賃</a></li>
+                    <li><a href="#">路線図・駅情報</a></li>
+                    <li><a href="#">企業情報</a></li>
+                </ul>
+                <div class="mobile-menu-btn" id="menuBtn">
+                    <i class="fa-solid fa-bars"></i>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <div class="status-bar" id="statusBar">
+        <div class="container">
+            <span class="status-label">美浜線</span>
+            <span class="status-content"><i class="fa-solid fa-circle-check"></i> <span id="statusText">平常通り運行しています</span></span>
+            <span class="current-time" id="clock">--:--</span>
+        </div>
+    </div>
+
+
+    <main>
+        <br>
+
+
+    <section class="le-concept-section section-padding">
+        <div class="container le-grid">
+            <h2 class="section-title">特急列車について <small>About the limited express train</small></h2>
+            <div class="le-text-content">
+                <h2><i class="fa-solid fa-water"></i> 海と街を、最速で結ぶ</h2>
+                <p>
+                    特急「せせらぎ」号は、ビジネスや観光で若狭湾岸を移動されるお客様のために、
+                    速達性と快適性を追求した、当社のフラッグシップ列車です。
+                </p>
+                <p>
+                    主要都市間を最短時間で結び、移動の時間を「上質な旅の一部」へと変えます。
+                </p>
+            </div>
+            <div class="le-image-container">
+                <i class="fa-solid fa-train fa-4x" style="color:var(--primary-color);"></i>
+                <p>特急「せせらぎ」イメージ</p>
+            </div>
+        </div>
+    </section>
+
+    
+    <section class="route-map-section2">
+        <div class="container">
+            <h2 class="section-title">停車駅 <small>Route Map</small></h2>
+            <div class="route-scroll">
+                <div class="route-line">
+                    <div class="station rapid2"><span class="dot"></span><span class="name">東江</span></div>
+                    <div class="station"><span class="dot"></span><span class="name">淺風</span></div>
+                    <div class="station"><span class="dot"></span><span class="name">久野</span></div>
+                    <div class="station rapid2"><span class="dot"></span><span class="name">葉が山</span></div>
+                    <div class="station"><span class="dot"></span><span class="name">峠浜</span></div>
+                    <div class="station"><span class="dot"></span><span class="name">関里</span></div>
+                    <div class="station"><span class="dot"></span><span class="name">南関里</span></div>
+                    <div class="station"><span class="dot"></span><span class="name">本郷</span></div>
+                    <div class="station"><span class="dot"></span><span class="name">忘木</span></div>
+                    <div class="station rapid2"><span class="dot"></span><span class="name">月見池公園口</span></div>
+                    <div class="station"><span class="dot"></span><span class="name">みらいが丘</span></div>
+                    <div class="station"><span class="dot"></span><span class="name">両津</span></div>
+                    <div class="station"><span class="dot"></span><span class="name">戸嶋</span></div>
+                    <div class="station"><span class="dot"></span><span class="name2">香島よこづの森</span></div>
+                    <div class="station"><span class="dot"></span><span class="name">北浜</span></div>
+                    <div class="station rapid2"><span class="dot"></span><span class="name">美浜</span></div>
+                </div>
+            </div>
+        </div>
+        </div>
+    </section>
+
+    <section class="le-feature-section section-padding bg-light">
+        <div class="container">
+            <h2 class="midashi"><i class="fa-solid fa-train"></i> ストレートな速達性</h2>
+            <p class="feature-lead">
+                停車駅を厳選することで、主要駅間の移動時間を大幅に短縮しています。
+                停車駅は、東江、葉が山、月見池公園口、美浜の4駅です。
+            </p>
+            <div class="feature-card-wrapper">
+                <div class="feature-card">
+                    <i class="fa-solid fa-stopwatch"></i>
+                    <h3>移動時間の短縮</h3>
+                    <p>停車駅を限定し、主要区間を快速列車よりも約10分短縮します。</p>
+                </div>
+                <div class="feature-card">
+                    <i class="fa-solid fa-map-pin"></i>
+                    <h3>主要な拠点へ直行</h3>
+                    <p>ビジネスや観光の主要拠点のみに停車し、無駄のない移動を実現します。</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="le-comfort-section section-padding">
+        <div class="container">
+            <h2 class="midashi"><i class="fa-regular fa-star"></i> 車内の特徴</h2>
+            <ul class="comfort-list">
+                <li><i class="fa-solid fa-chair"></i> リクライニングシート：全席に快適なリクライニングシートを導入しています。</li>
+                <li><i class="fa-solid fa-wifi"></i> 無料Wi-Fi：全車両で高速無料Wi-Fiがご利用可能です。</li>
+                <li><i class="fa-solid fa-plug"></i> モバイル電源：各座席にモバイル機器充電用のコンセントを完備しています。</li>
+                <li><i class="fa-solid fa-toilet"></i> 多目的トイレ：車椅子対応の広々としたトイレを設置しています。</li>
+            </ul>
+            
+            <div class="btn-area" style="margin-top: 40px;">
+                <a href="#" class="btn-primary">時刻表・運賃を確認する</a>
+            </div>
+        </div>
+    </section>
+</main>
+
+
+
+    <footer>
+        <div class="container footer-content">
+            <div class="footer-info">
+                <h3>蒼風急行株式会社</h3>
+                <p>〒919-xxxx 若狭県東江市蒼風大野1-1<br>TEL: 0770-xx-xxxx</p>
+            </div>
+            <div class="footer-links">
+                <a href="#">安全報告書</a>
+                <a href="#">プライバシーポリシー</a>
+                <a href="#">サイトマップ</a>
+                <a href="#">お問い合わせ</a>
+            </div>
+        </div>
+
+        <div class="topback">
+                  <p style="font-size: 10px;">若狭海岸鉄道及び若狭県、その他企業はすべて架空の創造物であり、実際には存在しません。 文中には、実在の団体・企業名がありますが、それらと一切関係はございません。</p>
+      <a style="color: rgb(87, 182, 255);" href="https://fictional-railway.github.io/myrailways/">架空鉄道一覧はこちらから</a>
+        </div>
+
+        <div class="copyright">
+            &copy; Aokaze Kyuko Railway Co.,Ltd. All Rights Reserved.
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
