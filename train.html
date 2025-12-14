@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>蒼風急行 | Aokaze Railway</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <header>
+        <div class="header-inner">
+            <div class="logo">
+                <a href="./index.html">
+                <span class="logo-icon"><i class="fa-solid fa-wind"></i></span></a>
+                <div class="logo-text">
+                    <a href="./index.html">
+                    <h1>蒼風急行</h1>
+                    </a><a href="./index.html">
+                    <span>AOKAZE RAILWAY</span>
+                    </a>
+                </div>
+            </div>
+            <nav>
+                <ul class="nav-list">
+                    <li class="ue"><a href="#">運行情報</a></li>
+                    <li><a href="#">時刻表・運賃</a></li>
+                    <li><a href="#">路線図・駅情報</a></li>
+                    <li><a href="#">企業情報</a></li>
+                </ul>
+                <div class="mobile-menu-btn" id="menuBtn">
+                    <i class="fa-solid fa-bars"></i>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <br>
+    <div class="status-bar" id="statusBar">
+        <div class="container">
+            <span class="status-label">美浜線</span>
+            <span class="status-content"><i class="fa-solid fa-circle-check"></i> <span id="statusText">平常通り運行しています</span></span>
+            <span class="current-time" id="clock">--:--</span>
+        </div>
+    </div>
+
+<main>
+    </section>
+
+    <section class="train-summary-section section-padding">
+        <div class="container">
+            <h2 class="section-title">車両図鑑 <small>Train encyclopedia</small></h2>
+            
+            <h3>蒼風急行7300系</h3>
+            <p class="train-catch">
+                <i class="fa-solid fa-star" style="color: var(--accent-color);"></i> 蒼風急行の全線を担う、次世代のスタンダード
+            </p>
+            
+            <div class="summary-grid">
+                <div class="summary-specs">
+                    <h3>主要諸元</h3>
+                    <ul>
+                        <li><i class="fa-solid fa-maximize"></i> 営業最高速度: 150km/h <br>　 （設計最高速度: 160km/h）</li>
+                        <li><i class="fa-solid fa-bolt"></i> 運転方式: VVVFインバータ制御</li>
+                        <li><i class="fa-solid fa-people-group"></i> 編成: 2両編成（通常）、または4両編成（多客時）</li>
+                        <li><i class="fa-solid fa-circle-info"></i> 導入年: 1989年</li>
+                    </ul>
+                </div>
+                
+                        <img class="img" src="./image/蒼急7300系.png" width="100%" alt="">
+                
+            </div>
+            
+            <p class="train-description">
+                7300系は、開業と同時に導入された当社の最新鋭車両です。
+                「人にやさしく、環境にやさしい」をコンセプトに設計され、
+                高い省エネルギー性能と、快適で安全な移動空間を提供します。
+            </p>
+        </div>
+    </section>
+
+    <section class="section-padding">
+        <div class="container">
+            <h2 class="section-title"><i class="fa-solid fa-pencil"></i> デザインと技術</h2>
+            <br>
+                    <h3 class="section-title3"><i class="fa-solid fa-water"></i>海を映すエクステリア</h3>
+                    <p>
+                        外観は、当社のコーポレートカラーである濃い青色（<span style="color: var(--primary-color); font-weight: bold;">鉄紺</span>）と、
+                        若狭湾の透明な水面をイメージした爽やかなシアン（<span style="color: var(--accent-color); font-weight: bold;">アクセントカラー</span>）を基調としています。
+                        流線型の前面デザインは、速達性を象徴するとともに、風を切るような軽快さを表現しています。
+                    </p>
+        </div>
+    </section>
+
+    <section class="train-interior-section section-padding">
+        <div class="container">
+            <h2><i class="fa-solid fa-people-roof"></i> 車内設備と快適性</h2>
+            
+            <ul class="interior-list">
+                <li>
+                     
+                    <h4><i class="fa-solid fa-couch"></i>広々とした座席</h4>
+                    <p>シート幅を拡大し、長距離乗車でも疲れにくいバケットシートを採用しています。</p>
+                </li>
+                <li>
+                     
+                    <h4><i class="fa-solid fa-temperature-half"></i>快適な冷暖房</h4>
+                    <p>季節や乗車率に応じて最適な温度を自動で調整する空調システムを導入しています。</p>
+                </li>
+                <li>
+                    <h4><i class="fa-solid fa-earth-asia"></i>LED車内案内表示器</h4>
+                    <p>次駅、乗換案内、運行情報などを多言語（日・英・中・韓）で表示します。</p>
+                </li>
+            </ul>
+        </div>
+    </section>
+</main>
+
+    <footer>
+        <div class="container footer-content">
+            <div class="footer-info">
+                <h3>蒼風急行株式会社</h3>
+                <p>〒8920-0065 若狭県江崎市東江本町2-26-3<br>TEL: 0770-xx-xxxx</p>
+            </div>
+            <div class="footer-links">
+                <a href="#">安全報告書</a>
+                <a href="#">プライバシーポリシー</a>
+                <a href="#">サイトマップ</a>
+                <a href="#">お問い合わせ</a>
+            </div>
+        </div>
+        
+        <div class="topback">
+                  <p style="font-size: 10px;">蒼風急行及び若狭県、その他企業はすべて架空の創造物であり、実際には存在しません。 文中には、実在の団体・企業名がありますが、それらと一切関係はございません。</p>
+      <a style="color: rgb(87, 182, 255);" href="https://fictional-railway.github.io/myrailways/">架空鉄道一覧はこちらから</a>
+        </div>
+
+        <div class="copyright">
+            &copy; Aokaze Kyuko Railway Co.,Ltd. All Rights Reserved.
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

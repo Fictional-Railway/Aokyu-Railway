@@ -236,6 +236,29 @@ header {
     transform: translateX(-50%);
 }
 
+.section-title2 {
+    text-align: center;
+    border-bottom: 2px solid var(--primary-color);
+    display: inline-block;
+    padding-bottom: 5px;
+    margin-bottom: -30px;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+
+.section-title3 {
+    text-align: center;
+    border-bottom: 2px dashed var(--primary-color);
+    display: inline-block;
+    padding-bottom: 5px;
+    margin-bottom: 0px;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
 .section-title small {
     display: block;
     font-size: 0.9rem;
@@ -974,3 +997,210 @@ body {
     color: var(--accent-color);
     margin-right: 10px;
 }
+
+/* =================================================== */
+/* 車両紹介（train_guide.html）専用スタイル */
+/* =================================================== */
+
+.train-summary-section {
+    padding-bottom: 30px;
+}
+
+.train-name {
+    color: var(--primary-color);
+    font-size: 2.5rem;
+    border-bottom: 3px solid var(--accent-color);
+    display: inline-block;
+    padding-bottom: 5px;
+    margin-bottom: 10px;
+}
+
+.train-catch {
+    font-size: 1.1rem;
+    color: var(--text-light);
+    margin-bottom: 30px;
+}
+
+/* 概要のグリッドレイアウト */
+.summary-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 30px;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+.summary-specs {
+    background: var(--bg-light);
+    padding: 20px;
+    border-radius: 8px;
+}
+
+.summary-specs h3 {
+    color: var(--primary-color);
+    margin-top: 0;
+    font-size: 1.3rem;
+}
+
+.summary-specs ul {
+    list-style: none;
+    padding-left: 0;
+    line-height: 2;
+}
+
+.summary-specs i {
+    color: var(--accent-color);
+    margin-right: 10px;
+}
+
+.train-image-placeholder {
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background: #fff;
+}
+.train-image-placeholder p {
+    color: var(--text-light);
+    font-size: 0.9rem;
+    margin-top: 10px;
+}
+
+.train-description {
+    line-height: 1.7;
+}
+
+/* 技術的特徴セクション */
+.train-feature-section h2 {
+    color: var(--primary-color);
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.feature-detail-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 30px;
+}
+
+.feature-icon {
+    text-align: center;
+}
+
+.feature-icon i {
+    font-size: 3.5rem;
+    color: var(--primary-color);
+    background: #fff;
+    padding: 20px;
+    border-radius: 50%;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+@media (min-width: 768px) {
+
+    .fa-palette {
+        display: none;
+    }
+
+}
+
+.feature-text h3 {
+    color: var(--primary-color);
+    border-bottom: 2px dashed var(--accent-color);
+    padding-bottom: 5px;
+    margin-top: 0;
+    margin-bottom: 15px;
+}
+
+
+/* 車内設備リスト */
+.train-interior-section h2 {
+    color: var(--primary-color);
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.interior-list {
+    list-style: none;
+    padding-left: 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.interior-list li {
+    background: #fff;
+    border: 1px solid #eee;
+    padding: 20px;
+    border-left: 5px solid var(--accent-color);
+    border-radius: 4px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+}
+
+.interior-list h4 {
+    margin-top: 0;
+    color: var(--primary-color);
+}
+
+.interior-list i {
+    color: var(--primary-color);
+    margin-right: 10px;
+}
+
+/* PC（タブレット以上）での調整 */
+@media (min-width: 768px) {
+    .summary-grid {
+        grid-template-columns: 1fr 1.2fr;
+    }
+    .summary-photo {
+        order: 2; /* 写真を右側へ */
+    }
+
+    /* 左右交互配置 */
+    .feature-detail-grid {
+        grid-template-columns: 1fr 100px 1fr;
+        gap: 0;
+        align-items: center;
+    }
+    .feature-text {
+        padding: 0 40px;
+    }
+
+    .feature-text:nth-child(1) {
+        grid-column: 1 / 2;
+        text-align: right;
+    }
+    .feature-icon:nth-child(2) {
+        grid-column: 2 / 3;
+    }
+
+    .feature-icon.order-2 {
+        grid-column: 2 / 3;
+        grid-row: 2 / 3;
+    }
+    .feature-text.order-1 {
+        grid-column: 3 / 4;
+        grid-row: 2 / 3;
+        text-align: left;
+    }
+}
+
+.img {
+    border-radius: 10px;
+}
+
+/* --- 追加: 車両形式名用のH3スタイル --- */
+.train-summary-section h3 {
+    color: var(--primary-color); /* 濃い青 */
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-top: 30px;
+    margin-bottom: 15px;
+    /* アクセントカラーを使った点線の下線を追加 */
+    border-bottom: 1px dashed var(--accent-color); 
+    padding-bottom: 5px;
+}
+
