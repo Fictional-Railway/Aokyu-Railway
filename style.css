@@ -1220,3 +1220,14 @@ body {
     padding-bottom: 5px;
 }
 
+.kome {
+    text-align: right;
+    font-size: 0.7rem;
+    color: #c1c1c1
+}
+
+.kome2 {
+    text-align: right;
+    font-size: 0.7rem;
+    color: #fefefe
+}
