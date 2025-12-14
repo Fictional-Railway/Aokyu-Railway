@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>蒼風急行 | Aokaze Railway</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <header>
+        <div class="header-inner">
+            <div class="logo">
+                <a href="./index.html">
+                <span class="logo-icon"><i class="fa-solid fa-wind"></i></span></a>
+                <div class="logo-text">
+                    <a href="./index.html">
+                    <h1>蒼風急行</h1>
+                    </a><a href="./index.html">
+                    <span>AOKAZE RAILWAY</span>
+                    </a>
+                </div>
+            </div>
+            <nav>
+                <ul class="nav-list">
+                    <li class="ue"><a href="#">運行情報</a></li>
+                    <li><a href="#">時刻表・運賃</a></li>
+                    <li><a href="#">路線図・駅情報</a></li>
+                    <li><a href="#">企業情報</a></li>
+                </ul>
+                <div class="mobile-menu-btn" id="menuBtn">
+                    <i class="fa-solid fa-bars"></i>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <br>
+    <div class="status-bar" id="statusBar">
+        <div class="container">
+            <span class="status-label">美浜線</span>
+            <span class="status-content"><i class="fa-solid fa-circle-check"></i> <span id="statusText">平常通り運行しています</span></span>
+            <span class="current-time" id="clock">--:--</span>
+        </div>
+    </div>
+
+    <!--ICカード-->
+    <section class="ic-card-section">
+        <div class="container">
+            <h2 class="section-title">ICカードサービス <small>IC Card Service</small></h2>
+<main>
+
+    <section class="fare-guide-section section-padding">
+        <div class="container">
+            <h2>🎫 普通運賃のご案内</h2>
+            <p>
+                当社の普通運賃は、乗車距離に応じた対キロ制運賃を採用しています。
+                小児運賃は、大人運賃の半額です。
+            </p>
+
+            <div class="fare-table-container">
+                <table class="fare-table">
+                    <thead>
+                        <tr>
+                            <th>区間</th>
+                            <th>大人運賃（片道）</th>
+                            <th>小児運賃（片道）</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>1～9km</td>
+                            <td>210円</td>
+                            <td>105円</td>
+                        </tr>
+                        <tr>
+                            <td>9～18km</td>
+                            <td>290円</td>
+                            <td>145円</td>
+                        </tr>
+                        <tr>
+                            <td>18～27km</td>
+                            <td>370円</td>
+                            <td>185円</td>
+                        </tr>
+                        <tr>
+                            <td>27～36km</td>
+                            <td>450円</td>
+                            <td>225円</td>
+                        </tr>
+                        <tr>
+                            <td>36km以上</td>
+                            <td>550円</td>
+                            <td>275円</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <p class="small-note">
+                ※運賃は全て税込です。特急列車をご利用の際は、別途特急料金が必要です。
+            </p>
+            
+            <div class="btn-area">
+                <a href="#" class="btn-primary">全駅間の運賃表を見る（PDF）</a>
+            </div>
+        </div>
+    </section>
+
+    <section class="special-ticket-section section-padding bg-light">
+        <div class="container">
+            <h2>✨ お得なきっぷ・企画乗車券</h2>
+
+            <div class="ticket-card-wrapper">
+                
+                <div class="ticket-card">
+                    <h3>一日乗車券</h3>
+                    <p>沿線の観光地を巡るのに最適。一日中乗り降り自由です。</p>
+                    <a href="#" class="btn-link">詳細を見る <i class="fa-solid fa-angle-right"></i></a>
+                </div>
+                
+                <div class="ticket-card">
+                    <h3>若狭湾岸フリーパス</h3>
+                    <p>当社線と若狭海岸鉄道線が乗り放題になるお得な周遊券です。</p>
+                    <a href="#" class="btn-link">詳細を見る <i class="fa-solid fa-angle-right"></i></a>
+                </div>
+
+                <div class="ticket-card">
+                    <h3>通勤・通学定期券</h3>
+                    <p>毎日の通勤・通学に便利な定期券のご案内です。</p>
+                    <a href="#" class="btn-link">購入方法はこちら <i class="fa-solid fa-angle-right"></i></a>
+                </div>
+            </div>
+            
+            <div class="btn-area" style="margin-top: 30px;">
+                <a href="#" class="btn-primary">定期券の料金検索へ</a>
+            </div>
+        </div>
+    </section>
+
+    <section class="related-link-section section-padding">
+        <div class="container">
+            <h2>関連情報</h2>
+            <ul class="related-list">
+                <li><a href="./ic.html"><i class="fa-solid fa-credit-card"></i> ICカードサービス Misacaについて</a></li>
+                <li><a href="#"><i class="fa-solid fa-file-pdf"></i> 各種きっぷの払い戻しについて</a></li>
+                <li><a href="#"><i class="fa-solid fa-money-bill-transfer"></i> 団体割引運賃について</a></li>
+            </ul>
+        </div>
+    </section>
+</main>
+</main>
+
+    <footer>
+        <div class="container footer-content">
+            <div class="footer-info">
+                <h3>蒼風急行株式会社</h3>
+                <p>〒919-xxxx 若狭県東江市蒼風大野1-1<br>TEL: 0770-xx-xxxx</p>
+            </div>
+            <div class="footer-links">
+                <a href="#">安全報告書</a>
+                <a href="#">プライバシーポリシー</a>
+                <a href="#">サイトマップ</a>
+                <a href="#">お問い合わせ</a>
+            </div>
+        </div>
+        
+        <div class="topback">
+                  <p style="font-size: 10px;">若狭海岸鉄道及び若狭県、その他企業はすべて架空の創造物であり、実際には存在しません。 文中には、実在の団体・企業名がありますが、それらと一切関係はございません。</p>
+      <a style="color: rgb(87, 182, 255);" href="https://fictional-railway.github.io/myrailways/">架空鉄道一覧はこちらから</a>
+        </div>
+
+        <div class="copyright">
+            &copy; Aokaze Kyuko Railway Co.,Ltd. All Rights Reserved.
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

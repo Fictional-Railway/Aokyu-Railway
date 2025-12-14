@@ -864,3 +864,113 @@ body {
     color: var(--primary-color);
     margin-bottom: 20px;
 }
+
+/* =================================================== */
+/* 運賃・きっぷ（fares.html）専用スタイル */
+/* =================================================== */
+
+/* 運賃表コンテナ */
+.fare-table-container {
+    max-width: 600px;
+    margin: 20px auto;
+    overflow-x: auto; /* スマホで横スクロール可能にする */
+}
+
+/* 運賃表のデザイン */
+.fare-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 15px;
+    font-size: 0.95rem;
+}
+
+.fare-table th, .fare-table td {
+    padding: 12px 15px;
+    text-align: center;
+    border: 1px solid #ddd;
+}
+
+.fare-table thead th {
+    background-color: var(--primary-color);
+    color: #fff;
+    font-weight: 600;
+}
+
+.fare-table tbody tr:nth-child(even) {
+    background-color: var(--bg-light);
+}
+
+.fare-table tbody tr:hover {
+    background-color: #e6f7ff; /* ホバーでアクセントカラー系に */
+}
+
+.small-note {
+    text-align: center;
+    font-size: 0.85rem;
+    color: #666;
+    margin-top: 20px;
+}
+
+/* お得なきっぷカード */
+.ticket-card-wrapper {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 25px;
+    margin-top: 20px;
+}
+
+.ticket-card {
+    background: #fff;
+    border: 1px solid #ddd;
+    border-top: 4px solid var(--accent-color); /* アクセントカラーを上部に使用 */
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+}
+
+.ticket-card h3 {
+    color: var(--primary-color);
+    font-size: 1.2rem;
+    margin-top: 0;
+}
+
+/* カード内の詳細リンク */
+.btn-link {
+    color: var(--accent-color);
+    text-decoration: none;
+    font-weight: 500;
+    display: inline-block;
+    margin-top: 10px;
+}
+
+.btn-link:hover {
+    text-decoration: underline;
+}
+
+/* 関連情報リスト */
+.related-list {
+    margin-top: 20px;
+    list-style: none;
+    padding-left: 0;
+}
+
+.related-list li {
+    padding: 10px 0;
+    border-bottom: 1px dashed #eee;
+}
+
+.related-list a {
+    color: var(--text-color);
+    text-decoration: none;
+    display: block;
+    transition: color 0.3s;
+}
+
+.related-list a:hover {
+    color: var(--primary-color);
+}
+
+.related-list i {
+    color: var(--accent-color);
+    margin-right: 10px;
+}
