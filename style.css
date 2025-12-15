@@ -1231,3 +1231,166 @@ body {
     font-size: 0.7rem;
     color: #fefefe
 }
+
+/* =================================================== */
+/* お知らせページ（news.html）専用スタイル */
+/* =================================================== */
+
+/* 1. 絞り込みフィルターボタン */
+.news-filter {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 40px;
+    flex-wrap: wrap; /* スマホで折り返す */
+}
+
+.filter-btn {
+    border: 1px solid #ddd;
+    background: #fff;
+    padding: 8px 20px;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    cursor: pointer;
+    transition: all 0.3s;
+    color: #666;
+}
+
+.filter-btn:hover {
+    background: #f0f0f0;
+}
+
+/* アクティブ（選択中）のボタン */
+.filter-btn.active {
+    background: var(--primary-color);
+    color: #fff;
+    border-color: var(--primary-color);
+}
+
+/* 2. お知らせリスト本体 */
+.news-list {
+    list-style: none;
+    padding: 0;
+    border-top: 1px solid #eee;
+}
+
+.news-item {
+    border-bottom: 1px solid #eee;
+    padding: 20px 0;
+    display: flex;
+    align-items: center;
+    transition: background-color 0.2s;
+}
+
+.news-item:hover {
+    background-color: #f9fbfd; /* ホバー時に薄い青 */
+}
+
+/* 日付とタグのグループ */
+.news-meta {
+    display: flex;
+    align-items: center;
+    min-width: 220px; /* PCでの幅確保 */
+    gap: 15px;
+}
+
+.news-meta time {
+    font-family: 'Roboto', sans-serif; /* 英数字用フォントがあれば */
+    color: #888;
+    font-size: 0.95rem;
+}
+
+/* カテゴリタグのデザイン */
+.news-tag {
+    font-size: 0.75rem;
+    padding: 4px 10px;
+    border-radius: 4px;
+    color: #fff;
+    background: #aaa; /* デフォルト（お知らせ） */
+    font-weight: 500;
+    min-width: 80px;
+    text-align: center;
+}
+
+/* タグごとの色分け */
+.tag-traffic { background-color: #dc3545; } /* 運行情報：赤 */
+.tag-event   { background-color: var(--accent-color); } /* イベント：シアン */
+.tag-corporate { background-color: var(--primary-color); } /* 企業情報：濃い青 */
+.tag-info    { background-color: #6c757d; } /* その他：グレー */
+
+
+/* 記事タイトル */
+.news-title {
+    color: var(--text-color);
+    text-decoration: none;
+    flex: 1; /* 残りの幅を埋める */
+    padding-left: 20px;
+    transition: color 0.3s;
+    display: block;
+}
+
+.news-title:hover {
+    color: var(--primary-color);
+    text-decoration: underline;
+}
+
+/* NEWアイコン */
+.new-icon {
+    color: #dc3545;
+    font-size: 0.7rem;
+    font-weight: bold;
+    border: 1px solid #dc3545;
+    padding: 1px 5px;
+    margin-left: 10px;
+    vertical-align: text-bottom;
+}
+
+/* 3. ページネーション */
+.pagination {
+    margin-top: 50px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.page-number {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    border: 1px solid #ddd;
+    color: var(--primary-color);
+    text-decoration: none;
+    transition: all 0.3s;
+}
+
+.page-number:hover,
+.page-number.current {
+    background: var(--primary-color);
+    color: #fff;
+    border-color: var(--primary-color);
+}
+
+
+/* ------------------------------------------------ */
+/* スマホ用レスポンシブ設定 */
+/* ------------------------------------------------ */
+@media (max-width: 768px) {
+    .news-item {
+        flex-direction: column; /* 縦並びにする */
+        align-items: flex-start; /* 左寄せ */
+        padding: 15px 0;
+    }
+
+    .news-meta {
+        margin-bottom: 8px; /* 日付タグとタイトルの間に余白 */
+        min-width: auto;
+    }
+
+    .news-title {
+        padding-left: 0; /* 左の余白を消す */
+        font-size: 0.95rem;
+    }
+}

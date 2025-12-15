@@ -46,43 +46,85 @@
         </div>
     </div>
 
-    <!--ICカード-->
-    <section class="ic-card-section">
+<main>
+    <section class="page-title-section">
         <div class="container">
-            <h2 class="section-title">ICカードサービス <small>IC Card Service</small></h2>
-<section class="ic-service-section section-padding">
+            <h1>お知らせ</h1>
+            <p class="subtitle">News & Information</p>
+        </div>
+    </section>
+
+    <section class="news-section section-padding">
         <div class="container">
-            <div class="ic-misaca-card">
-                <div class="ic-header">
-                    <h2>ご利用いただけるICカード</h2>
-                </div>
-                <div class="ic-content-grid">
-                    <div class="ic-image-container">
-                        <img src="./image/Misaca.png" width="100%" alt="">
-                        <p class="ic-note">※若狭海岸鉄道発行</p>
-                    </div>
-                    <div class="ic-text-content">
-                        <h3><img src="./image/Misaca文字2.png" width="50px" alt=""> がご利用可能です</h3>
-                        <p>
-                            蒼風急行の全線において、若狭海岸鉄道株式会社が発行するICカード「<img src="./image/Misaca文字2.png" width="50px" alt="">」 がご利用いただけます。
-                            乗車券購入の手間がなく、スムーズにご乗車いただけます。
-                        </p>
-                        <a href="https://fictional-railway.github.io/Wakasa-Coastal-Railway/fare.html" class="btn-primary misaca-link" target="_blank">
-                            Misacaについて（若狭海岸鉄道サイトへ）
-                            <i class="fa-solid fa-arrow-up-right-from-square"></i>
-                        </a>
-                    </div>
-                </div>
+            
+            <div class="news-filter">
+                <button class="filter-btn active">すべて</button>
+                <button class="filter-btn">運行情報</button>
+                <button class="filter-btn">イベント</button>
+                <button class="filter-btn">企業情報</button>
             </div>
 
-            <div class="ic-other-info">
-                <h3>全国相互利用サービスについて</h3>
-                <p>
-                    Misacaは、全国の交通系ICカード相互利用サービスに対応しています。
-                    主要な交通系ICカード（Suica、PASMO、ICOCA、manaca、TOICA、PiTaPa、nimoca、SUGOCAなど）での乗車が可能です。
-                    ただし、一部のサービスや特典は対象外となる場合がありますので、ご注意ください。
-                </p>
+            <ul class="news-list">
+                <li class="news-item">
+                    <div class="news-meta">
+                        <time datetime="2023-11-15">2023.11.15</time>
+                        <span class="news-tag tag-traffic">運行情報</span>
+                    </div>
+                    <a href="#" class="news-title">
+                        年末年始の運行ダイヤについて
+                        <span class="new-icon">NEW</span>
+                    </a>
+                </li>
+
+                <li class="news-item">
+                    <div class="news-meta">
+                        <time datetime="2023-11-10">2023.11.10</time>
+                        <span class="news-tag tag-event">イベント</span>
+                    </div>
+                    <a href="#" class="news-title">
+                        「秋のわかさ海岸スタンプラリー」の開催について
+                    </a>
+                </li>
+
+                <li class="news-item">
+                    <div class="news-meta">
+                        <time datetime="2023-10-25">2023.10.25</time>
+                        <span class="news-tag tag-corporate">企業情報</span>
+                    </div>
+                    <a href="#" class="news-title">
+                        2023年度 安全報告書を公表しました [PDF]
+                        <i class="fa-regular fa-file-pdf"></i>
+                    </a>
+                </li>
+
+                <li class="news-item">
+                    <div class="news-meta">
+                        <time datetime="2023-10-01">2023.10.01</time>
+                        <span class="news-tag tag-info">お知らせ</span>
+                    </div>
+                    <a href="./fares.html" class="news-title">
+                        運賃改定の実施について
+                    </a>
+                </li>
+                
+                <li class="news-item">
+                    <div class="news-meta">
+                        <time datetime="2023-09-15">2023.09.15</time>
+                        <span class="news-tag tag-event">イベント</span>
+                    </div>
+                    <a href="./train_guide.html" class="news-title">
+                        新型車両「A3000形」試乗会レポート
+                    </a>
+                </li>
+            </ul>
+
+            <div class="pagination">
+                <span class="page-number current">1</span>
+                <a href="#" class="page-number">2</a>
+                <a href="#" class="page-number">3</a>
+                <a href="#" class="page-number next"><i class="fa-solid fa-angle-right"></i></a>
             </div>
+
         </div>
     </section>
 </main>
