@@ -283,7 +283,7 @@ header {
 }
 
 .news-item {
-    border-bottom: 2px solid #eee;
+    border-bottom: 1px solid #eee;
     padding: 15px 0;
     display: flex;
     align-items: center;
@@ -1392,5 +1392,156 @@ body {
     .news-title {
         padding-left: 0; /* 左の余白を消す */
         font-size: 0.95rem;
+    }
+}
+
+/* =================================================== */
+/* 会社案内（company.html）専用スタイル */
+/* =================================================== */
+
+/* 1. 代表挨拶セクション */
+.message-box {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.message-box h3 {
+    color: var(--primary-color);
+    font-size: 1.5rem;
+    margin-bottom: 30px;
+}
+
+.message-box p {
+    text-align: left; /* 本文は左揃え */
+    line-height: 1.8;
+    margin-bottom: 20px;
+}
+
+.ceo-name {
+    margin-top: 40px;
+    text-align: right;
+}
+
+.ceo-name p {
+    text-align: right;
+    margin: 0;
+    font-size: 0.9rem;
+    color: #666;
+}
+
+.ceo-name .name {
+    font-size: 1.4rem;
+    font-weight: bold;
+    color: #333;
+    margin-top: 5px;
+}
+
+/* 2. 会社概要テーブル */
+.company-table-wrapper {
+    max-width: 800px;
+    margin: 0 auto;
+    background: #fff;
+    padding: 30px; /* 白いカード風の背景 */
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+}
+
+.company-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.company-table th, 
+.company-table td {
+    padding: 15px;
+    border-bottom: 1px solid #eee;
+    text-align: left;
+    vertical-align: top;
+}
+
+.company-table th {
+    width: 30%; /* 見出しの幅 */
+    color: var(--primary-color);
+    font-weight: 600;
+    white-space: nowrap; /* 見出しを改行させない（PC時） */
+}
+
+.company-table tr:last-child th,
+.company-table tr:last-child td {
+    border-bottom: none; /* 最後の線は消す */
+}
+
+/* 3. 沿革リスト */
+.history-list {
+    max-width: 800px;
+    margin: 0 auto;
+    position: relative;
+    border-left: 2px solid #ddd; /* タイムラインの線 */
+    padding-left: 30px;
+}
+
+.history-item {
+    margin-bottom: 30px;
+    position: relative;
+}
+
+/* タイムラインの点 */
+.history-item::before {
+    content: '';
+    position: absolute;
+    left: -36px; /* 線の位置に合わせる調整 */
+    top: 5px;
+    width: 10px;
+    height: 10px;
+    background: var(--accent-color);
+    border-radius: 50%;
+    border: 2px solid #fff; /* 白枠 */
+    box-shadow: 0 0 0 2px var(--accent-color); /* さらに外枠 */
+}
+
+.history-year {
+    font-weight: bold;
+    color: var(--primary-color);
+    margin-bottom: 5px;
+}
+
+
+/* ------------------------------------------------ */
+/* スマホ用レスポンシブ設定 */
+/* ------------------------------------------------ */
+@media (max-width: 768px) {
+    /* 会社概要テーブルを縦積みに */
+    .company-table th, 
+    .company-table td {
+        display: block;
+        width: 100%;
+        padding: 8px 0;
+        border: none;
+    }
+
+    .company-table th {
+        padding-top: 15px;
+        border-bottom: 1px dashed var(--accent-color); /* 区切り線 */
+        margin-bottom: 5px;
+        white-space: normal;
+    }
+
+    .company-table td {
+        padding-bottom: 15px;
+        border-bottom: 1px solid #eee;
+    }
+
+    /* テーブルラッパーの余白調整 */
+    .company-table-wrapper {
+        padding: 20px;
+    }
+
+    /* 沿革リストの調整 */
+    .history-list {
+        padding-left: 20px;
+    }
+    .history-item::before {
+        left: -26px;
     }
 }
