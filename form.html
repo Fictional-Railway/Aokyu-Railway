@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>蒼風急行 | Aokaze Railway</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <header>
+        <div class="header-inner">
+            <div class="logo">
+                <a href="./index.html">
+                <span class="logo-icon"><i class="fa-solid fa-wind"></i></span></a>
+                <div class="logo-text">
+                    <a href="./index.html">
+                    <h1>蒼風急行</h1>
+                    </a><a href="./index.html">
+                    <span>AOKAZE RAILWAY</span>
+                    </a>
+                </div>
+            </div>
+            <nav>
+                <ul class="nav-list">
+                    <li class="ue"><a href="#">運行情報</a></li>
+                    <li><a href="#">時刻表・運賃</a></li>
+                    <li><a href="#">路線図・駅情報</a></li>
+                    <li><a href="./company.html">企業情報</a></li>
+                </ul>
+                <div class="mobile-menu-btn" id="menuBtn">
+                    <i class="fa-solid fa-bars"></i>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <br>
+    <div class="status-bar" id="statusBar">
+        <div class="container">
+            <span class="status-label">美浜線</span>
+            <span class="status-content"><i class="fa-solid fa-circle-check"></i> <span id="statusText">平常通り運行しています</span></span>
+            <span class="current-time" id="clock">--:--</span>
+        </div>
+    </div>
+
+    <main>
+
+    <section class="form-section section-padding bg-light">
+        <div class="container">
+            <p class="lead-text">
+                ご意見、ご質問、ご要望などはこちらのフォームより承っております。<br>
+                折り返し担当者よりご連絡いたしますので、必要事項をご入力ください。
+            </p>
+            
+            <form action="#" method="POST" class="contact-form">
+                
+                <fieldset class="form-fieldset">
+                    <legend class="fieldset-legend">お問い合わせ種別 <span class="required-tag">必須</span></legend>
+                    <div class="form-group">
+                        <select id="category" name="category" required>
+                            <option value="">選択してください</option>
+                            <option value="fare_ticket">運賃・きっぷについて</option>
+                            <option value="train_info">列車運行・遅延について</option>
+                            <option value="lost_item">お忘れ物について</option>
+                            <option value="bringing">機材持ち込みについて</option>
+                            <option value="suggestion">ご意見・ご要望</option>
+                            <option value="other">その他</option>
+                        </select>
+                    </div>
+                </fieldset>
+
+                <fieldset class="form-fieldset">
+                    <legend class="fieldset-legend">お客様情報</legend>
+                    
+                    <div class="form-group">
+                        <label for="name">お名前 <span class="required-tag">必須</span></label>
+                        <input type="text" id="name" name="name" required placeholder="(例)蒼風 太郎">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email">メールアドレス <span class="required-tag">必須</span></label>
+                        <input type="email" id="email" name="email" required placeholder="(例)aokyu@example.com">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="phone">電話番号</label>
+                        <input type="tel" id="phone" name="phone" placeholder="(例)090-xxxx-xxxx ">
+                    </div>
+                    
+                </fieldset>
+                
+                <fieldset class="form-fieldset">
+                    <legend class="fieldset-legend">お問い合わせ内容 <span class="required-tag">必須</span></legend>
+                    <div class="form-group">
+                        <label for="subject">件名</label>
+                        <input type="text" id="subject" name="subject" placeholder="例: 定期券の購入方法について">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="message">内容詳細</label>
+                        <textarea id="message" name="message" rows="8" required placeholder="具体的な内容をご記入ください。"></textarea>
+                    </div>
+                </fieldset>
+
+                <div class="privacy-check">
+                    <input type="checkbox" id="privacy" name="privacy" required>
+                    <label for="privacy">
+                        <a href="#">プライバシーポリシー</a>に同意する <span class="required-tag">必須</span>
+                    </label>
+                </div>
+
+                <div class="submit-area">
+                    <button type="submit" class="btn-primary btn-submit">送信する</button>
+                    <button type="reset" class="btn-secondary">リセット</button>
+                </div>
+            </form>
+            
+            <div class="contact-info">
+                <h3>お電話によるお問い合わせ</h3>
+                <p>
+                    お忘れ物や緊急のご連絡は、お電話にて承ります。<br>
+                    <strong>蒼風急行 お客様センター: <a href="tel:00-0000-0000">00-0000-0000</a></strong>
+                </p>
+            </div>
+            
+        </div>
+    </section>
+</main>
+
+    <footer>
+        <div class="container footer-content">
+            <div class="footer-info">
+                <h3>蒼風急行株式会社</h3>
+                <p>〒8920-0065 若狭県江崎市東江本町2-26-3<br>TEL: 0770-xx-xxxx</p>
+            </div>
+            <div class="footer-links">
+                <a href="#">安全報告書</a>
+                <a href="#">プライバシーポリシー</a>
+                <a href="#">サイトマップ</a>
+                <a href="#">お問い合わせ</a>
+            </div>
+        </div>
+        
+        <div class="topback">
+                  <p style="font-size: 10px;">蒼風急行及び若狭県、その他企業はすべて架空の創造物であり、実際には存在しません。 文中には、実在の団体・企業名がありますが、それらと一切関係はございません。</p>
+      <a style="color: rgb(87, 182, 255);" href="https://fictional-railway.github.io/myrailways/">架空鉄道一覧はこちらから</a>
+        </div>
+
+        <div class="copyright">
+            &copy; Aokaze Railway Co.,Ltd. All Rights Reserved.
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

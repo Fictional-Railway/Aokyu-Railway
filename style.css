@@ -257,6 +257,17 @@ header {
     border-bottom: 2px solid var(--primary-color);
     display: inline-block;
     padding-bottom: 5px;
+    margin-bottom: 30px;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.section-title2 {
+    text-align: center;
+    border-bottom: 2px solid var(--primary-color);
+    display: inline-block;
+    padding-bottom: 5px;
     margin-bottom: -30px;
     position: relative;
     left: 50%;
@@ -1544,4 +1555,255 @@ body {
     .history-item::before {
         left: -26px;
     }
+}
+
+@media screen and (min-width:641px) {
+	.sp {
+		display: none;
+	}
+}
+
+.pin-icon {
+    color: var(--limited-express-color);
+}
+/* =================================================== */
+/* 撮影ルール（photography_rules.html）専用スタイル */
+/* =================================================== */
+
+/* 警告ボックス */
+.important-warning {
+    background-color: #fff3f3;
+    border: 1px solid #ffaaaa;
+    border-left: 5px solid #dc3545; /* 警告色（赤） */
+    padding: 15px;
+    margin-top: 30px;
+    border-radius: 4px;
+    display: flex;
+    align-items: flex-start;
+}
+.important-warning i {
+    font-size: 1.5rem;
+    color: #dc3545;
+    margin-right: 15px;
+    margin-top: 5px;
+}
+.important-warning p {
+    margin: 0;
+    line-height: 1.6;
+}
+
+/* ルールリスト */
+.rules-list {
+    list-style: none;
+    padding: 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 25px;
+    margin-top: 30px;
+}
+
+.rules-list li {
+    background: #fff;
+    border-radius: 6px;
+    padding: 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+    border-left: 5px solid; /* 色はカテゴリで指定 */
+}
+
+/* 禁止事項 (Prohibited) */
+.rule-prohibited {
+    border-left-color: #dc3545; /* 赤 */
+}
+
+/* 注意事項 (Caution) */
+.rule-caution {
+    border-left-color: var(--primary-color); /* 濃い青 */
+}
+
+.rules-list h4 {
+    margin-top: 0;
+    font-size: 1.1rem;
+    color: #333;
+}
+
+.rules-list i {
+    font-size: 1.5rem;
+    float: right;
+    margin-top: -5px;
+}
+
+.rule-prohibited i {
+    color: #dc3545;
+}
+.rule-caution i {
+    color: var(--primary-color);
+}
+
+.rules-list p {
+    font-size: 0.95rem;
+    line-height: 1.5;
+}
+
+.rules-note {
+    font-size: 0.85rem;
+    color: #666;
+    margin-top: 20px;
+    padding-top: 10px;
+    border-top: 1px dashed #ccc;
+    text-align: center;
+}
+
+/* 最後のメッセージ */
+.final-message-section {
+    text-align: center;
+}
+.final-message-section h2 {
+    color: var(--primary-color);
+    border-bottom: 2px dashed var(--accent-color);
+    display: inline-block;
+    padding-bottom: 5px;
+}
+/* =================================================== */
+/* お問い合わせページ（form.html）専用スタイル */
+/* =================================================== */
+
+.lead-text {
+    text-align: center;
+    color: var(--text-color);
+    margin-bottom: 40px;
+    line-height: 1.7;
+}
+
+.contact-form {
+    max-width: 700px;
+    margin: 0 auto;
+    background: #fff;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+}
+
+.form-fieldset {
+    border: 1px solid #ddd;
+    padding: 20px;
+    margin-bottom: 30px;
+    border-radius: 6px;
+}
+
+.fieldset-legend {
+    color: var(--primary-color);
+    font-size: 1.2rem;
+    font-weight: bold;
+    padding: 0 10px;
+}
+
+.required-tag {
+    color: #dc3545; /* 赤色 */
+    font-size: 0.8rem;
+    font-weight: bold;
+    margin-left: 5px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    font-weight: 500;
+    margin-bottom: 5px;
+    color: #333;
+}
+
+.form-group input[type="text"],
+.form-group input[type="email"],
+.form-group input[type="tel"],
+.form-group select,
+.form-group textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1rem;
+    box-sizing: border-box; /* paddingを含めて幅100%にする */
+    transition: border-color 0.3s;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+    border-color: var(--accent-color);
+    outline: none;
+    box-shadow: 0 0 0 1px rgba(0, 150, 255, 0.2);
+}
+
+/* プライバシー同意チェックボックス */
+.privacy-check {
+    text-align: center;
+    margin-top: 30px;
+    font-size: 0.95rem;
+}
+
+.privacy-check label a {
+    color: var(--primary-color);
+    text-decoration: underline;
+}
+
+/* 送信ボタンエリア */
+.submit-area {
+    text-align: center;
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.btn-submit {
+    padding: 12px 30px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    cursor: pointer;
+    border: none;
+}
+
+.btn-secondary {
+    padding: 12px 30px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    cursor: pointer;
+    border: 1px solid #ccc;
+    background: #f0f0f0;
+    color: #666;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+}
+
+.btn-secondary:hover {
+    background: #e0e0e0;
+}
+
+/* 電話連絡先 */
+.contact-info {
+    max-width: 700px;
+    margin: 40px auto 0;
+    padding: 20px;
+    background: #fcfcfc;
+    border: 1px solid #eee;
+    border-radius: 6px;
+    text-align: center;
+}
+
+.contact-info h3 {
+    color: var(--primary-color);
+    font-size: 1.3rem;
+    margin-top: 0;
+}
+
+.contact-info a {
+    color: #dc3545; /* 目立つ色で強調 */
+    font-size: 1.2rem;
+    text-decoration: none;
+    font-weight: bold;
+    display: block;
+    margin-top: 10px;
 }

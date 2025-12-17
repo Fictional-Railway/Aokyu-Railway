@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>蒼風急行 | Aokaze Railway</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <header>
+        <div class="header-inner">
+            <div class="logo">
+                <a href="./index.html">
+                <span class="logo-icon"><i class="fa-solid fa-wind"></i></span></a>
+                <div class="logo-text">
+                    <a href="./index.html">
+                    <h1>蒼風急行</h1>
+                    </a><a href="./index.html">
+                    <span>AOKAZE RAILWAY</span>
+                    </a>
+                </div>
+            </div>
+            <nav>
+                <ul class="nav-list">
+                    <li class="ue"><a href="#">運行情報</a></li>
+                    <li><a href="#">時刻表・運賃</a></li>
+                    <li><a href="#">路線図・駅情報</a></li>
+                    <li><a href="./company.html">企業情報</a></li>
+                </ul>
+                <div class="mobile-menu-btn" id="menuBtn">
+                    <i class="fa-solid fa-bars"></i>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <br>
+    <div class="status-bar" id="statusBar">
+        <div class="container">
+            <span class="status-label">美浜線</span>
+            <span class="status-content"><i class="fa-solid fa-circle-check"></i> <span id="statusText">平常通り運行しています</span></span>
+            <span class="current-time" id="clock">--:--</span>
+        </div>
+    </div>
+
+    <main>
+
+
+    <section class="policy-section section-padding">
+        <div class="container">
+            <h2 class="section-title" style="font-size: 20px;">写真撮影・録音をされるお客様へ <small>To customers taking photographs or recording audio</small></h2>
+            <h2><i class="fa-solid fa-camera"></i> 基本方針とお願い</h2>
+            <p>
+                蒼風急行電鉄では、お客様の趣味や記録を目的とした写真撮影・録音行為を、安全と他のお客様への配慮のもと、原則として<strong style="color: var(--limited-express-color);">禁止しておりません。</strong>
+            </p>
+            <p>
+                しかしながら、近年、駅構内や列車内でのトラブルや危険行為が増加傾向にあります。
+                皆様が安全・快適に鉄道をご利用いただくため、下記のルールを必ずお守りください。
+            </p>
+            
+            <div class="important-warning">
+                <i class="fa-solid fa-triangle-exclamation"></i>
+                <p>
+                    危険行為や迷惑行為と判断した場合、または駅係員の指示に従っていただけない場合は、撮影・録音を中止し、退去していただくことがあります。
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <section class="rules-section section-padding bg-light">
+        <div class="container">
+            <h2>🚨 特に厳守していただきたい事項</h2>
+            
+            <ul class="rules-list">
+                <li class="rule-prohibited">
+                    <i class="fa-solid fa-ban"></i>
+                    <h4>立ち入り禁止区域での撮影</h4>
+                    <p>線路内、運転台、乗務員室、改札窓口内など、立ち入り禁止区域への侵入は固くお断りします。</p>
+                </li>
+                <li class="rule-prohibited">
+                    <i class="fa-solid fa-ban"></i>
+                    <h4>フラッシュ撮影・三脚の使用</h4>
+                    <p>列車運行に支障をきたす恐れがあるため、列車・係員に向けてのフラッシュ撮影は禁止です。三脚や大型機材の使用は、他のお客様の通行の妨げとなるため、原則禁止です（※）。</p>
+                </li>
+                <li class="rule-caution">
+                    <i class="fa-solid fa-person-shelter"></i>
+                    <h4>ホームでの危険行為</h4>
+                    <p>ホームドア付近、点字ブロックの内側、列車への接触の恐れがある場所での撮影は禁止です。絶対に黄色い線を超えないでください。</p>
+                </li>
+                <li class="rule-caution">
+                    <i class="fa-solid fa-people-arrows"></i>
+                    <h4>プライバシー・肖像権の配慮</h4>
+                    <p>他のお客様、特に小さなお子様や、駅係員・乗務員を無断で撮影・録音することはご遠慮ください。</p>
+                </li>
+                <li class="rule-caution">
+                    <i class="fa-solid fa-circle-info"></i>
+                    <h4>駅設備や掲示物の撮影</h4>
+                    <p>防犯カメラや保安設備の詳細が判別できるような撮影、および係員が指示する掲示物の撮影はご遠慮いただく場合があります。</p>
+                </li>
+            </ul>
+
+            <div class="rules-note">
+                ※三脚や大型機材の使用については、事前に広報部へお問い合わせ・申請をお願いする場合があります。
+            </div>
+
+            <div class="btn-area">
+                <a href="./form.html" class="btn-primary">広報部へのお問い合わせはこちら</a>
+            </div>
+        </div>
+    </section>
+    
+    <section class="final-message-section section-padding">
+        <div class="container">
+            <h2>最後に</h2>
+            <p>
+                蒼風急行は、お客様の安全を第一に考えています。
+                皆様のご理解とご協力により、マナーを守った鉄道趣味活動が継続できるよう、ご協力をお願いいたします。
+            </p>
+        </div>
+    </section>
+</main>
+
+    <footer>
+        <div class="container footer-content">
+            <div class="footer-info">
+                <h3>蒼風急行株式会社</h3>
+                <p>〒8920-0065 若狭県江崎市東江本町2-26-3<br>TEL: 0770-xx-xxxx</p>
+            </div>
+            <div class="footer-links">
+                <a href="#">安全報告書</a>
+                <a href="#">プライバシーポリシー</a>
+                <a href="#">サイトマップ</a>
+                <a href="#">お問い合わせ</a>
+            </div>
+        </div>
+        
+        <div class="topback">
+                  <p style="font-size: 10px;">蒼風急行及び若狭県、その他企業はすべて架空の創造物であり、実際には存在しません。 文中には、実在の団体・企業名がありますが、それらと一切関係はございません。</p>
+      <a style="color: rgb(87, 182, 255);" href="https://fictional-railway.github.io/myrailways/">架空鉄道一覧はこちらから</a>
+        </div>
+
+        <div class="copyright">
+            &copy; Aokaze Railway Co.,Ltd. All Rights Reserved.
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
